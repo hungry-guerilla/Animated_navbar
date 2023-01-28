@@ -4,3 +4,92 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  border-right-color: #eafbff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eafbff), color-stop(50%, #eafbff), color-stop(50%, #5290f9), to(#5290f9));
+  background-image: -o-linear-gradient(top, #eafbff 0%, #eafbff 50%, #5290f9 50%, #5290f9 100%);
+  background-image: linear-gradient(to bottom, #eafbff 0%, #eafbff 50%, #5290f9 50%, #5290f9 100%);
+  font-family: "Raleway";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 3px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  width: 80px;
+  -webkit-transition: width 0.6s linear;
+  -o-transition: width 0.6s linear;
+  transition: width 0.6s linear;
+}
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  width: 0;
+  -webkit-transition: width 0.6s linear;
+  -o-transition: width 0.6s linear;
+  transition: width 0.6s linear;
+}
+nav ul li {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  opacity: 0;
+  -webkit-transition: width 0.6s linear, opacity 0.6s linear;
+  -o-transition: width 0.6s linear, opacity 0.6s linear;
+  transition: width 0.6s linear, opacity 0.6s linear;
+}
+nav ul a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+}
+
+nav.active {
+  width: 350px;
+}
+
+nav.active ul {
+  width: 100%;
+}
+
+nav.active ul li {
+  opacity: 1;
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
